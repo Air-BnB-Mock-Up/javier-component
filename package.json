@@ -1,6 +1,6 @@
 {
   "name": "javier-component",
-  "description": "<<<<<<< HEAD # Project Name",
+  "description": "working on FEC project with team members: Jase Dinardo and Branan Landau",
   "author": "Javier Flores",
   "license": "ISC",
   "engines": {
@@ -11,6 +11,7 @@
     "axios": "^0.20.0",
     "body-parser": "^1.19.0",
     "express": "^4.17.1",
+    "faker": "^5.1.0",
     "jquery": "^3.5.1",
     "mysql": "^2.18.1",
     "path": "^0.12.7",
