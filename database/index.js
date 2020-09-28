@@ -103,6 +103,3 @@ db.query(`CREATE DATABASE IF NOT EXISTS ${database}`, (err, result) => {
 });
 
 module.exports.db = db;
-
-
-// db.query("CREAT")
