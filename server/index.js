@@ -3,8 +3,13 @@ const path = require('path');
 const db = require('../database/dbFunctions.js');
 
 const app = express();
+app.use(express.static(__dirname + '/../client/public'));
 app.use(express.json());
 app.use(express.urlencoded({extended: true}));
+
+app.get('/', (req, res) => {
+  res.status(200).send();
+})
 
 app.get('/reviews/initial/:locationID', (req, res) => {
   db.initialRequest(req.params.locationID, (err, results) => {
