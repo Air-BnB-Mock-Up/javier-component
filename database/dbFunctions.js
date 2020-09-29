@@ -20,6 +20,7 @@ const initialRequest = (location, callback) => {
         return callback(err, null);
       }
       console.log('Retrieved reviews!');
+      initialResults.location[0].totalReviews = results.length;
       initialResults.reviews = results.slice(0,6);
       return callback(null, initialResults);
     });

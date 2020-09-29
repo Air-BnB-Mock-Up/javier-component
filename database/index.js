@@ -59,13 +59,13 @@ const locationsTable = `CREATE TABLE IF NOT EXISTS reviews_locations (
   location_id INT AUTO_INCREMENT PRIMARY KEY,
   location_name VARCHAR(255),
   location_hostID INT,
-  location_avg DECIMAL(2, 1),
-  location_avgCln INT,
-  location_avgAcc INT,
-  location_avgComm INT,
-  location_avgLoc INT,
-  Location_avgCheckIn INT,
-  Location_avgVal INT,
+  location_avg DECIMAL(3, 2),
+  location_avgCln DECIMAL(2, 1),
+  location_avgAcc DECIMAL(2, 1),
+  location_avgComm DECIMAL(2, 1),
+  location_avgLoc DECIMAL(2, 1),
+  location_avgCheckIn DECIMAL(2, 1),
+  location_avgVal DECIMAL(2, 1),
   FOREIGN KEY (location_hostID)
     REFERENCES reviews_hosts (host_id)
 )`
