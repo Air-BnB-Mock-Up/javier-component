@@ -34,12 +34,12 @@ for (var i = 1; i < 501; i++) {
 }
 
 for (var i = 1; i < 101; i++) {
-  var avgCln = Math.floor((Math.random() * 3) + 3);
-  var avgAcc = Math.floor((Math.random() * 3) + 3);
-  var avgComm = Math.floor((Math.random() * 3) + 3);
-  var avgLoc = Math.floor((Math.random() * 3) + 3);
-  var avgCheckIn = Math.floor((Math.random() * 3) + 3);
-  var avgVal = Math.floor((Math.random() * 3) + 3);
+  var avgCln = (Math.random() * 3) + 2;
+  var avgAcc = (Math.random() * 3) + 2;
+  var avgComm = (Math.random() * 3) + 2;
+  var avgLoc = (Math.random() * 3) + 2;
+  var avgCheckIn = (Math.random() * 3) + 2;
+  var avgVal = (Math.random() * 3) + 2;
   var totalAvg = (avgCln+avgAcc+avgComm+avgLoc+avgCheckIn+avgVal)/6;
   var hostID = Math.floor((Math.random() * 500) + 1);
 
