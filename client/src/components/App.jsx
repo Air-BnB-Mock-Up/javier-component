@@ -15,15 +15,20 @@ class App extends React.Component {
 
   componentDidMount() {
     $.get(`http://localhost:1010/reviews/initial/${this.props.locationID}`)
-    .done((results) => {
-      this.setState({
-        locationRatings: results.location[0],
-        reviews: results.reviews
+      .done((results) => {
+        this.setState({
+          locationRatings: results.location[0],
+          reviews: results.reviews
+        })
       })
-    })
   }
 
   render () {
+    if (this.state.reviews.length === 0) {
+      return (
+        <div></div>
+      );
+    }
     return (
       <div>
         <h1>Reviews</h1>
@@ -31,7 +36,7 @@ class App extends React.Component {
         <InitialReviews reviews={this.state.reviews}/>
 
       </div>
-    )
+    );
   }
 }
 
