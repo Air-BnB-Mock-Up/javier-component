@@ -2,4 +2,6 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './components/App.jsx';
 
-ReactDOM.render(<App locationID={20}/>, document.getElementById('app'));
+var location = Math.floor((Math.random() * 100) + 1);
+
+ReactDOM.render(<App locationID={location}/>, document.getElementById('app'));
