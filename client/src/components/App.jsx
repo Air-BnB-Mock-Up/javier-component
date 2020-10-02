@@ -10,9 +10,8 @@ class App extends React.Component {
     this.state = {
       locationRatings: {},
       reviews: []
-    }
+    };
   }
-
 
   componentDidMount() {
     $.get(`http://localhost:1010/reviews/initial/${this.props.locationID}`)
@@ -20,8 +19,13 @@ class App extends React.Component {
         this.setState({
           locationRatings: results.location[0],
           reviews: results.reviews
-        })
-      })
+        });
+      });
+  }
+
+  readMore (index) {
+    this.state.reviews[index].readMore = true;
+    this.setState({reviews: this.state.reviews});
   }
 
   render () {
@@ -36,7 +40,7 @@ class App extends React.Component {
         <div className="reviewsContainer">
           <Rating ratings={this.state.locationRatings}/>
           <AverageRatings ratings={this.state.locationRatings}/>
-          <InitialReviews reviews={this.state.reviews}/>
+          <InitialReviews reviews={this.state.reviews} readMore={this.readMore.bind(this)}/>
         </div>
         <hr></hr>
       </div>
