@@ -1,6 +1,7 @@
 import React from 'react';
 import $ from 'jquery';
-import InitialRatings from './InitialRatings.jsx';
+import Rating from './Rating.jsx';
+import AverageRatings from './AverageRatings.jsx';
 import InitialReviews from './InitialReviews.jsx';
 
 class App extends React.Component {
@@ -31,10 +32,13 @@ class App extends React.Component {
     }
     return (
       <div>
-        <h1>Reviews</h1>
-        <InitialRatings ratings={this.state.locationRatings}/>
-        <InitialReviews reviews={this.state.reviews}/>
-
+        <hr></hr>
+        <div className="reviewsContainer">
+          <Rating ratings={this.state.locationRatings}/>
+          <AverageRatings ratings={this.state.locationRatings}/>
+          <InitialReviews reviews={this.state.reviews}/>
+        </div>
+        <hr></hr>
       </div>
     );
   }

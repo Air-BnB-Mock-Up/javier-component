@@ -1,0 +1,101 @@
+hr {
+  max-width: 1120px;
+  padding: 0;
+  margin: 0 auto;
+}
+.reviewsContainer {
+  max-width: 1120px;
+  margin: auto;
+  padding-top: 48px;
+  padding-bottom: 48px;
+  color: #222222;
+  font-family: Circular,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+}
+
+/* review1-Rating DIV START */
+.reviews1 {
+  padding-bottom: 32px;
+}
+
+.ratingReviewNumbers {
+    color: rgb(34, 34, 34);
+    font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, "Helvetica Neue", sans-serif;
+    font-weight: 600;
+    font-size: 22px;
+    line-height: 26px;
+    margin: 0;
+}
+
+.star {
+  color: rgb(255, 90, 95)
+}
+/* review1-Rating DIV END */
+
+
+/* review2-AverageRatings DIV START */
+.AverageRatingsDiv {
+  margin-bottom: 24px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin-left: -8px;
+  margin-right: -8px;
+  width: calc(100% + 16px);
+}
+
+.AverageRating {
+  width: 83.3333%;
+  margin-right: 16.6667%;
+  margin-bottom: 16px;
+  padding-right: 8px;
+  padding-left: 8px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  overflow: hidden;
+
+}
+
+.categoryName {
+  width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.categoryScore {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-left: 12px;
+  width: 62%;
+}
+
+.outerbar {
+  position: relative;
+  height: 4px;
+  width: 100%;
+  margin-right: 4px;
+  background: rgb(221, 221, 221);
+  border-radius: 2px;
+}
+
+.innerbar {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  bottom: 0px;
+  background: black;
+  border-radius: 2px;
+}
+
+.ratingNumber {
+  color: rgb(34, 34, 34);
+    font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, "Helvetica Neue", sans-serif;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 16px;
+    margin-left: 6px;
+}
+/* review2-AverageRatings DIV END */
