@@ -9,6 +9,7 @@ hr {
   padding-top: 48px;
   padding-bottom: 48px;
   color: #222222;
+  background: rgb(255, 255, 255);
   font-family: Circular,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,sans-serif;
   font-weight: 400;
   font-size: 16px;
@@ -91,7 +92,7 @@ hr {
 }
 /* review2-AverageRatings DIV END */
 
-/* review2-InitialReviews DIV START */
+/* review3-InitialReviews DIV START */
 .initialReviewsDiv {
   margin-bottom: 0px;
   display: grid;
@@ -158,74 +159,105 @@ hr {
   font-weight: 600;
   outline: none;
 }
+/* review3-InitialReviews DIV END */
 
-
-
-
-/* .outerbar {
-  position: relative !important;
-  height: 4px !important;
-  width: 40% !important;
-  top: 5px;
-  margin-right: 4px !important;
-  background: rgb(221, 221, 221) !important;
-  border-radius: 2px !important;
+/* review4-ShowAllReviews DIV START */
+.showAllReviews {
+  cursor: pointer;
+  margin: 0px;
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 500;
+  border-radius: 8px;
+  border-width: 1px;
+  border-style: solid;
+  outline: none;
+  padding: 13px 23px;
+  border-color: rgb(34, 34, 34);
+  background: rgb(255, 255, 255);
+  color: rgb(34, 34, 34);
 }
-
-.ratingNumber {
-  width: 10%;
-  color: rgb(34, 34, 34) !important;
-  font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, "Helvetica Neue", sans-serif !important;
-  font-weight: 600 !important;
-  font-size: 12px !important;
-  line-height: 16px !important;
-  margin-left: 6px !important;
-} */
-
-
-/*
-.rating {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-gap: 1em;
+.showAllReviews:hover {
+  background-color: #F5F5F5;
 }
-
-.ratingCategory {
+.modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  transition: 200ms ease-in-out;
+  border: 1px solid black;
+  border-radius: 12px;
+  z-index: 10;
+  background-color: white;
+  width: 100%;
+  max-width: 1032px;
+  height: 91.65%;
+  max-height: 866px;
+}
+.modal.active{
+  transform: translate(-50%, -50%) scale(1);
+  height: 91.65%;
+  max-height: 866px;
+}
+.modalHeader {
+  height: 8.6%;
+  padding-top: 16px;
+}
+.modalCloser {
+  font-family: Circular,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,sans-serif;
+  height: 32px;
+  width: 32px;
+  font-size: 24px;
+  font-weight: 300;
+  border-radius: 20px;
+  border: none;
+  outline: none;
+  margin: 0px;
+  padding: 0px;
+  cursor: pointer;
   position: relative;
+  left: 14px;
+  background: transparent;
+}
+.modalCloser:hover {
+  background-color: #F5F5F5;
+}
+.overlay {
+  position: fixed;
+  opacity: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, .4);
+  pointer-events: none;
+}
+.overlay.active {
+  opacity: 1;
+  pointer-events: all;
+}
+.modalBody {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-gap: 1em;
+  grid-template-columns: 45% 55%;
+  height: 89%;
 }
-
-.outerbar {
-  position: relative !important;
-  height: 4px !important;
-  width: 100% !important;
-  top: 5px;
-  margin-right: 4px !important;
-  background: rgb(221, 221, 221) !important;
-  border-radius: 2px !important;
+.modalBodyLeft {
+  padding-left: 24px;
+  margin-left: 8.3333%;
 }
-
-.innerbar {
-  position: absolute !important;
-  top: 0px !important;
-  left: 0px !important;
-  bottom: 0px !important;
-  background: black !important;
-  border-radius: 2px !important;
+.modalBodyRight {
+  height: 100%;
+  overflow: auto;
 }
-
-.ratingNumber {
-  color: rgb(34, 34, 34) !important;
-  font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, "Helvetica Neue", sans-serif !important;
-  font-weight: 600 !important;
-  font-size: 12px !important;
-  line-height: 16px !important;
-  margin-left: 6px !important;
+.ratingReviewNumbers.active {
+  font-size: 32px;
 }
-
-.lastTry {
-  display: grid;
-  grid-template-columns: 80% 20%;
-} */
+.AverageRatingsDiv.active {
+  grid-template-columns: 1fr;
+  font-size: 14px;
+}
+.initialReviewsDiv.active {
+  grid-template-columns: 1fr;
+}
+/* review4-ShowAllReviews DIV END */

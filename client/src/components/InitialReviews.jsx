@@ -1,9 +1,10 @@
 import React from 'react';
 import moment from 'moment';
 
-const InitialReviews = ({reviews, readMore}) => {
+const InitialReviews = ({reviews, readMore, modal}) => {
+  console.log('currently Running Initial Reviews with reviews as:', reviews, modal);
   return (
-    <div className="initialReviewsDiv">
+    <div className={`initialReviewsDiv ${modal}`}>
       {reviews.map((review, index) => {
         var date = moment(review.review_createdAt);
         var testing;

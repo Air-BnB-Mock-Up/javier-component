@@ -1,8 +1,8 @@
 import React from 'react';
 
-const AverageRatings = ({ratings}) => {
+const AverageRatings = ({ratings, modal}) => {
   return (
-    <div className='AverageRatingsDiv'>
+    <div className={`AverageRatingsDiv ${modal}`}>
       <div className='AverageRating'>
         <div className="categoryName">
           Cleanliness
