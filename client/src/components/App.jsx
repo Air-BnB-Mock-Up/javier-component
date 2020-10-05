@@ -39,7 +39,6 @@ class App extends React.Component {
   readMore (index) {
     if (this.state.modal === 'active') {
       var newReviewsModals = this.state.reviewsModal;
-      console.log('newReviewsModals happening: ', newReviewsModals);
       newReviewsModals[index].readMore = true;
       return this.setState({reviewsModal: newReviewsModals});
     } else {
