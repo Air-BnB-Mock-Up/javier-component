@@ -17,7 +17,7 @@ class App extends React.Component {
   }
 
   componentDidMount() {
-    $.get(`http://localhost:1010/reviews/initial/${this.props.locationID}`)
+    $.get(`reviews/initial/${this.props.locationID}`)
       .done((results) => {
         this.setState({
           locationRatings: results.location[0],
@@ -38,11 +38,14 @@ class App extends React.Component {
 
   readMore (index) {
     if (this.state.modal === 'active') {
-      this.state.reviewsModal[index].readMore = true;
-      return this.setState({reviewsModal: this.state.reviews});
+      var newReviewsModals = this.state.reviewsModal;
+      console.log('newReviewsModals happening: ', newReviewsModals);
+      newReviewsModals[index].readMore = true;
+      return this.setState({reviewsModal: newReviewsModals});
     } else {
-      this.state.reviews[index].readMore = true;
-      return this.setState({reviews: this.state.reviews});
+      var newReviews = this.state.reviews;
+      newReviews[index].readMore = true;
+      return this.setState({reviews: newReviews});
     }
   }
 
@@ -76,7 +79,7 @@ class App extends React.Component {
     }
     return (
       <div>
-        <hr></hr>
+        <hr/>
         <div className="reviewsContainer">
           <Rating ratings={this.state.locationRatings}/>
           <AverageRatings ratings={this.state.locationRatings}/>
@@ -84,7 +87,7 @@ class App extends React.Component {
           <ShowAllReviews reviewsAmount = {this.state.locationRatings.totalReviews} modalView={this.modalView.bind(this)}/>
           {this.renderView()}
         </div>
-        <hr></hr>
+        <hr/>
       </div>
     );
   }
