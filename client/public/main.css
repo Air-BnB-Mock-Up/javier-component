@@ -1,0 +1,262 @@
+hr {
+  max-width: 1120px;
+  padding: 0;
+  margin: 0 auto;
+}
+.reviewsContainer {
+  max-width: 1120px;
+  margin: auto;
+  padding-top: 48px;
+  padding-bottom: 48px;
+  color: #222222;
+  background: rgb(255, 255, 255);
+  font-family: Circular,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+}
+
+/* review1-Rating DIV START */
+.reviews1 {
+  padding-bottom: 32px;
+}
+.ratingReviewNumbers {
+    color: rgb(34, 34, 34);
+    font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, "Helvetica Neue", sans-serif;
+    font-weight: 600;
+    font-size: 22px;
+    line-height: 26px;
+    margin: 0;
+}
+.star {
+  color: rgb(255, 90, 95)
+}
+/* review1-Rating DIV END */
+
+/* review2-AverageRatings DIV START */
+.AverageRatingsDiv {
+  margin-bottom: 24px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin-left: -8px;
+  margin-right: -8px;
+  width: calc(100% + 16px);
+}
+.AverageRating {
+  width: 83.3333%;
+  margin-right: 16.6667%;
+  margin-bottom: 16px;
+  padding-right: 8px;
+  padding-left: 8px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  overflow: hidden;
+}
+.categoryName {
+  width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.categoryScore {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-left: 12px;
+  width: 62%;
+}
+.outerbar {
+  position: relative;
+  height: 4px;
+  width: 100%;
+  margin-right: 4px;
+  background: rgb(221, 221, 221);
+  border-radius: 2px;
+}
+.innerbar {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  bottom: 0px;
+  background: black;
+  border-radius: 2px;
+}
+.ratingNumber {
+  color: rgb(34, 34, 34);
+    font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, "Helvetica Neue", sans-serif;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 16px;
+    margin-left: 6px;
+}
+/* review2-AverageRatings DIV END */
+
+/* review3-InitialReviews DIV START */
+.initialReviewsDiv {
+  margin-bottom: 0px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+}
+
+.initialReview {
+  width: 83.3333%;
+  margin-right: 16.6667%;
+  margin-bottom: 40px;
+}
+
+.reviewTopPart {
+  margin-bottom: 16px;
+  display: flex;
+}
+
+.avatarImg {
+  height: 56px;
+  width: 56px;
+  border-radius: 80px;
+}
+
+.reviewUser {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 20px;
+  margin-left: 12px;
+  margin-top: 4px;
+}
+
+.reviewDate {
+  color: rgb(113, 113, 113);
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.reviewMsg {
+  color: rgb(34, 34, 34);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  word-break: break-word;
+}
+
+.readMore {
+  font-size: inherit;
+  font-family: inherit;
+  font-style: inherit;
+  font-variant: inherit;
+  line-height: inherit;
+  appearance: none;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  margin: 0px;
+  padding: 0px;
+  user-select: auto;
+  color: rgb(34, 34, 34);
+  text-decoration: underline;
+  border-radius: 4px;
+  font-weight: 600;
+  outline: none;
+}
+/* review3-InitialReviews DIV END */
+
+/* review4-ShowAllReviews DIV START */
+.showAllReviews {
+  cursor: pointer;
+  margin: 0px;
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 500;
+  border-radius: 8px;
+  border-width: 1px;
+  border-style: solid;
+  outline: none;
+  padding: 13px 23px;
+  border-color: rgb(34, 34, 34);
+  background: rgb(255, 255, 255);
+  color: rgb(34, 34, 34);
+}
+.showAllReviews:hover {
+  background-color: #F5F5F5;
+}
+.modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  transition: 200ms ease-in-out;
+  border: 1px solid black;
+  border-radius: 12px;
+  z-index: 10;
+  background-color: white;
+  width: 100%;
+  max-width: 1032px;
+  height: 91.65%;
+  max-height: 866px;
+}
+.modal.active{
+  transform: translate(-50%, -50%) scale(1);
+  height: 91.65%;
+  max-height: 866px;
+}
+.modalHeader {
+  height: 8.6%;
+  padding-top: 16px;
+}
+.modalCloser {
+  font-family: Circular,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,sans-serif;
+  height: 32px;
+  width: 32px;
+  font-size: 24px;
+  font-weight: 300;
+  border-radius: 20px;
+  border: none;
+  outline: none;
+  margin: 0px;
+  padding: 0px;
+  cursor: pointer;
+  position: relative;
+  left: 14px;
+  background: transparent;
+}
+.modalCloser:hover {
+  background-color: #F5F5F5;
+}
+.overlay {
+  position: fixed;
+  opacity: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, .4);
+  pointer-events: none;
+}
+.overlay.active {
+  opacity: 1;
+  pointer-events: all;
+}
+.modalBody {
+  display: grid;
+  grid-template-columns: 45% 55%;
+  height: 89%;
+}
+.modalBodyLeft {
+  padding-left: 24px;
+  margin-left: 8.3333%;
+}
+.modalBodyRight {
+  height: 100%;
+  overflow: auto;
+}
+.ratingReviewNumbers.active {
+  font-size: 32px;
+}
+.AverageRatingsDiv.active {
+  grid-template-columns: 1fr;
+  font-size: 14px;
+}
+.initialReviewsDiv.active {
+  grid-template-columns: 1fr;
+}
+/* review4-ShowAllReviews DIV END */

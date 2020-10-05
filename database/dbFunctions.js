@@ -21,7 +21,7 @@ const initialRequest = (location, callback) => {
       }
       console.log('Retrieved reviews!');
       initialResults.location[0].totalReviews = results.length;
-      initialResults.reviews = results.slice(0,6);
+      initialResults.reviews = results;
       return callback(null, initialResults);
     });
   });
