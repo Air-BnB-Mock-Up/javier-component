@@ -17,7 +17,9 @@ class App extends React.Component {
   }
 
   componentDidMount() {
-    $.get(`reviews/initial/${this.props.locationID}`)
+    var locationURL = window.location.href.split('/');
+    var locationId = locationURL[locationURL.length - 2];
+    $.get(`/reviews/initial/${locationId}`)
       .done((results) => {
         this.setState({
           locationRatings: results.location[0],
@@ -28,9 +30,13 @@ class App extends React.Component {
   }
 
   modalView () {
+    var body = document.getElementsByTagName('body')[0];
+
     if (this.state.modal === 'inactive') {
+      body.style.overflow = 'hidden';
       return this.setState({modal: 'active'});
     }
+    body.style.overflow = 'visible';
     return this.setState({modal: 'inactive'});
   }
 
