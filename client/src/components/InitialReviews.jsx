@@ -2,7 +2,6 @@ import React from 'react';
 import moment from 'moment';
 
 const InitialReviews = ({reviews, readMore, modal}) => {
-  console.log('currently Running Initial Reviews with reviews as:', reviews, modal);
   return (
     <div className={`initialReviewsDiv ${modal}`}>
       {reviews.map((review, index) => {
