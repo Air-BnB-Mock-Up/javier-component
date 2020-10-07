@@ -33,7 +33,6 @@ class App extends React.Component {
     var body = document.getElementsByTagName('body')[0];
 
     if (this.state.modal === 'inactive') {
-      console.log('this is body', body);
       body.style.overflow = 'hidden';
       return this.setState({modal: 'active'});
     }
