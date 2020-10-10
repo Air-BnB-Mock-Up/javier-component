@@ -3,13 +3,9 @@ const path = require('path');
 const db = require('../database/dbFunctions.js');
 
 const app = express();
-app.use('/reviews', express.static(__dirname + '/../client/public'));
+app.use('/reviews/:locationId', express.static(__dirname + '/../client/public'));
 app.use(express.json());
 app.use(express.urlencoded({extended: true}));
-
-app.get('/', (req, res) => {
-  res.status(200).send();
-})
 
 app.get('/reviews/initial/:locationID', (req, res) => {
   if (req.params.locationID > 100 || req.params.locationID < 1) {
